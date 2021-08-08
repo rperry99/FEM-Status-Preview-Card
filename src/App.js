@@ -1,14 +1,23 @@
 import './App.css';
 
 function App() {
+  console.log(window.innerWidth);
   return (
     <>
       <div className="card">
         <div className="image-container">
-          <img
-            src="./images/image-header-mobile.jpg"
-            alt="People in an open office workspace"
-          />
+          {window.innerWidth <= 1023 ? (
+            <img
+              src="./images/image-header-mobile.jpg"
+              alt="People in an open office workspace"
+            />
+          ) : (
+            <img
+              src="./images/image-header-desktop.jpg"
+              alt="People in an open office workspace"
+            />
+          )}
+
           <div className="overlay"></div>
         </div>
 
