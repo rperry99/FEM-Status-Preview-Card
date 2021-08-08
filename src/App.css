@@ -1,38 +1,111 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0a0c1c;
+}
+
+.card {
+  width: 90%;
+  margin: 80px auto;
+  background: #1b1937;
+  border-radius: 8px;
+  padding-bottom: 32px;
+}
+
+.image-container {
+  width: 100%;
+  position: relative;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.overlay {
+  width: 110%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background: #ab5cdb;
+  opacity: 0.75;
+}
+
+.content-container {
+  padding: 0 31.5px;
+}
+
+h1 {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
   text-align: center;
+  margin: 40px 0px 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 span {
+  color: #ab5cdb;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.description {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: white;
+  opacity: 0.75;
+  margin-bottom: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.stats {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.stat {
+  width: 100%;
+}
+
+.stat .stat-count {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29.05px;
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.stat .stat-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  opacity: 60%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.stat:not(:last-child) {
+  margin-bottom: 24px;
 }
